@@ -3,7 +3,8 @@ package tomduhourq.learningscalaz.monoidop
 import tomduhourq.learningscalaz.monoid.Monoid
 
 /** We would like to provide an operator.
-  * But we don’t want to enrich just one type, but enrich all types that has an instance for Monoid.
+  * But we don’t want to enrich just one type,
+  * but enrich all types that have an instance of Monoid available.
   */
 trait MonoidOp[A] {
   val F: Monoid[A]
@@ -18,7 +19,7 @@ object MonoidOp {
    * @tparam A the type for which we are creating the MonoidOp.
    * @return a MonoidOp[A] that can use |+| operator among other values of type A.
    */
-  implicit def toMonoidOp[A: Monoid](a: A): MonoidOp[A] = new MonoidOp[A] {
+  implicit def toMonoidOp[A : Monoid](a: A): MonoidOp[A] = new MonoidOp[A] {
     val F = implicitly[Monoid[A]]
     val value = a
   }
