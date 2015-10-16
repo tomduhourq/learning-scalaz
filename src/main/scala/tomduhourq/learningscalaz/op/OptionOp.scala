@@ -19,4 +19,4 @@ package tomduhourq.learningscalaz.op
 //  implicit def toOptionOp[A](a: A) = new OptionOp[A] {
 //    val value = a
 //  }
-}
+//}

@@ -3,7 +3,7 @@ package tomduhourq.learningscalaz.op
 import org.scalatest.FlatSpec
 import tomduhourq.learningscalaz.monoid.Monoid._
 import tomduhourq.learningscalaz.op.MonoidOp._
-import tomduhourq.learningscalaz.op.OptionOp._
+//import tomduhourq.learningscalaz.op.OptionOp._
 
 class OpSpec extends FlatSpec {
 
