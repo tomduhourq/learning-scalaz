@@ -1,7 +1,6 @@
-package tomduhourq.learningscalaz
+package tomduhourq.learningscalaz.polymorphism
 
-import org.scalatest.{Matchers, FreeSpec}
-import tomduhourq.learningscalaz.polymorphism.AdHoc
+import org.scalatest.{FreeSpec, Matchers}
 import tomduhourq.learningscalaz.polymorphism.Parametric._
 import tomduhourq.learningscalaz.polymorphism.Subtyped._
 
