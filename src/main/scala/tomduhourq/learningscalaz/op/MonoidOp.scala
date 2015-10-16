@@ -1,4 +1,4 @@
-package tomduhourq.learningscalaz.monoidop
+package tomduhourq.learningscalaz.op
 
 import tomduhourq.learningscalaz.monoid.Monoid
 
