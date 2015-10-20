@@ -6,7 +6,7 @@ import tomduhourq.learningscalaz.monoid.{Monoid => M}
 /**
  * Created by tomas on 16/10/15.
  */
-class MonoidSpec extends WordSpec  {
+class MonoidSpec extends WordSpec {
 
   val alternativeMonoid = new Monoid[Int] {
     def mappend(n1: Int, n2: Int) = n1 * n2
