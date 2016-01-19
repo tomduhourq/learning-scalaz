@@ -7,3 +7,5 @@ Follow [eed3si9n ScalaZ tutorial](http://eed3si9n.com/learning-scalaz/) with tes
 - Monoid
 - FoldLeft
 - MonoidOp
+- day1.sc
+- CanTruthy => CanTruthyOps
