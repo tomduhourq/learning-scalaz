@@ -1,6 +1,7 @@
 package tomduhourq.learningscalaz.foldleft
 
 import tomduhourq.learningscalaz.monoid.Monoid
+import scala.language.higherKinds
 
 /** Another abstraction to represent the idea of folding.
   * This typeclass will apply the widely known foldLeft operation on a

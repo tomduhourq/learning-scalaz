@@ -1,6 +1,8 @@
 package tomduhourq.learningscalaz.op
 
 import tomduhourq.learningscalaz.monoid.Monoid
+import scala.language.higherKinds
+import scala.language.implicitConversions
 
 /** We would like to provide an operator.
   * But we don’t want to enrich just one type,

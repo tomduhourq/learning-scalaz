@@ -2,7 +2,8 @@ package tomduhourq.learningscalaz.op
 
 import org.scalatest.FlatSpec
 import tomduhourq.learningscalaz.monoid.Monoid
-import tomduhourq.learningscalaz.monoid.Monoid._
+import tomduhourq.learningscalaz.monoid.Monoid.listMonoid
+import tomduhourq.learningscalaz.monoid.Monoid.intMonoid
 import tomduhourq.learningscalaz.op.MonoidOp._
 import tomduhourq.learningscalaz.op.OptionOp._
 
@@ -21,18 +22,14 @@ class OpSpec extends FlatSpec {
 
   "OptionOp" should "pimp Option" in {
 
-    assert(none[Int] == None)
-    assert(none[String] == None)
-    assert(none[List[Int]] == None)
+    assert(none[Int]        == None)
+    assert(none[String]     == None)
+    assert(none[List[Int]]  == None)
 
-    assert(1.some == Some(1))
+    assert(1.some     == Some(1))
     assert("Tom".some == Some("Tom"))
 
-
     assert((none[Int] | 1) == 1)
-
-      //TODO: this is currently not working.
-//    assert(~21.some == 21)
   }
 
 }

@@ -4,10 +4,13 @@ version:= "0.0.1-SNAPSHOT"
 
 scalaVersion:= "2.11.7"
 
-val scalaZVersion = "7.1.4"
+val scalazVersion = "7.1.4"
 
 val coreDependencies = Seq (
-  "org.scalaz" %% "scalaz-core" % scalaZVersion
+  "org.scalaz" %% "scalaz-core" % scalazVersion,
+  "org.scalaz" %% "scalaz-effect" % scalazVersion,
+  "org.scalaz" %% "scalaz-typelevel" % scalazVersion,
+  "org.scalaz" %% "scalaz-scalacheck-binding" % scalazVersion % "test"
 )
 
 val testDependencies = Seq (
@@ -25,7 +28,9 @@ parallelExecution in Test := false
 
 fork in Test := false
 
-assemblyJarName in assembly := "learning-ScalaZ-" + scalaZVersion + ".jar"
+assemblyJarName in assembly := "learning-Scalaz-" + scalazVersion + ".jar"
+
+initialCommands in console := "import scalaz._, Scalaz._"
 
 
 

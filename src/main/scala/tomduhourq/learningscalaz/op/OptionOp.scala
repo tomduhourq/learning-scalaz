@@ -1,6 +1,7 @@
 package tomduhourq.learningscalaz.op
 
 import tomduhourq.learningscalaz.monoid.Monoid
+import scala.language.implicitConversions
 
 trait OptionOp[A] {
   val opt: Option[A]
