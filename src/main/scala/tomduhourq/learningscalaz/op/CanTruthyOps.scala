@@ -1,6 +1,7 @@
 package tomduhourq.learningscalaz.op
 
 import tomduhourq.learningscalaz.truthy.CanTruthy
+import scala.language.implicitConversions
 
 /**
  * Trait to inject truthy methods to whichever
@@ -9,7 +10,7 @@ import tomduhourq.learningscalaz.truthy.CanTruthy
 trait CanTruthyOps[A] {
   def self: A
   implicit def F: CanTruthy[A]
-  final def truthy: Boolean = F.truthys(self)
+  final def truthy: Boolean = F.truthy(self)
 }
 
 object ToCanIsTruthyOps {
@@ -19,7 +20,7 @@ object ToCanIsTruthyOps {
       implicit def F: CanTruthy[A] = ev
     }
 
-  def truthyIf[A: CanTruthy, B, C](cond: A)(ifyes: => B)(ifno: => C) =
+  def truthyIf[A : CanTruthy, B, C](cond: A)(ifyes: => B)(ifno: => C) =
     if (cond.truthy) ifyes
     else ifno
 }
