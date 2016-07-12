@@ -10,7 +10,7 @@ import scala.language.implicitConversions
 trait CanTruthyOps[A] {
   def self: A
   implicit def F: CanTruthy[A]
-  final def truthy: Boolean = F.truthy(self)
+  final def truthy: Boolean = F.truthys(self)
 }
 
 object ToCanIsTruthyOps {

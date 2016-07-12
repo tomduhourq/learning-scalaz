@@ -1,16 +1,19 @@
 package tomduhourq.learningscalaz.truthy
 
+import tomduhourq.learningscalaz.op.ToCanIsTruthyOps
+
 /**
  * Boolean typeclass.
  */
 trait CanTruthy[A] { self =>
-  def truthy(a: A): Boolean
+  def truthys(a: A): Boolean
 }
 
 object CanTruthy {
   def apply[A](implicit ev: CanTruthy[A]) = ev
+
   def truthys[A](f: A => Boolean) = new CanTruthy[A] {
-    def truthy(a: A) = f(a)
+    def truthys(a: A) = f(a)
   }
 
   // Identity
